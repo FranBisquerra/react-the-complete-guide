@@ -12,15 +12,25 @@ state = {
   otherState: 'Some other values'
 } 
 
-switchNameHandler = (name) => {
-  this.setState({
-    persons: [
-      {name: name, age: 30},
-      {name: 'Fran', age: 29},
-      {name: 'Stephanie', age: 27},
-    ]
-  })
-}
+  switchNameHandler = (name) => {
+    this.setState({
+      persons: [
+        {name: name, age: 30},
+        {name: 'Fran', age: 29},
+        {name: 'Stephanie', age: 27},
+      ]
+    })
+  }
+
+  nameChangedHandler = (event) => {
+    this.setState({
+      persons: [
+        {name: 'Max', age: 30},
+        {name: event.target.value, age: 29},
+        {name: 'Stephanie', age: 27},
+      ]
+    })
+  }
 
   render() {
     return (
@@ -33,6 +43,7 @@ switchNameHandler = (name) => {
         <Person 
           name={this.state.persons[1].name} 
           age={this.state.persons[1].age}
+          changed={this.nameChangedHandler}
           click={this.switchNameHandler.bind(this, 'Max!')}>My hobbies: Racing</Person>
         <Person 
           name={this.state.persons[2].name} 
