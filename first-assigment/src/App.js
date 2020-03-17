@@ -1,10 +1,12 @@
 import React from 'react';
+import UserOutput from './UserOutput/UserOutput'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <p>Cleared App!</p>
+      <UserOutput username="Fran"></UserOutput>
+      <UserOutput username="Pepe"></UserOutput>
     </div>
   );
 }
