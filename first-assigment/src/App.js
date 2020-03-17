@@ -24,7 +24,6 @@ class App extends Component {
       <br/>
       <br/>
       <UserOutput username={this.state.username}></UserOutput>
-      <UserOutput username={this.state.username}></UserOutput>
     </div>
     )
   }
