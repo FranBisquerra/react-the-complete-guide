@@ -3,15 +3,24 @@ import Person from './Person/Person';
 
 class App extends Component {
 
-  state = {
-    persons: [
-      {name: 'Max', age: 30},
-      {name: 'Fran', age: 29},
-      {name: 'Stephanie', age: 26},
-    ]
-  } 
+state = {
+  persons: [
+    {name: 'Max', age: 30},
+    {name: 'Fran', age: 29},
+    {name: 'Stephanie', age: 26},
+  ],
+  otherState: 'Some other values'
+} 
 
-switchNameHandler = () => console.log('Hello')
+switchNameHandler = () => {
+  this.setState({
+    persons: [
+      {name: 'Maximilian', age: 30},
+      {name: 'Fran', age: 29},
+      {name: 'Stephanie', age: 27},
+    ]
+  })
+}
 
   render() {
     return (
